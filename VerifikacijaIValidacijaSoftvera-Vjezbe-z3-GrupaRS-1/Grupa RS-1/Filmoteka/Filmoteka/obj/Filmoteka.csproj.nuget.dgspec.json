@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj": {}
+    "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj": {}
   },
   "projects": {
-    "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj": {
+    "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
+        "projectUniqueName": "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
         "projectName": "Filmoteka",
-        "projectPath": "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
-        "packagesPath": "C:\\Users\\Ehlimana\\.nuget\\packages\\",
-        "outputPath": "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\obj\\",
+        "projectPath": "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
+        "packagesPath": "C:\\Users\\MaNemoj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ehlimana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MaNemoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -47,12 +49,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

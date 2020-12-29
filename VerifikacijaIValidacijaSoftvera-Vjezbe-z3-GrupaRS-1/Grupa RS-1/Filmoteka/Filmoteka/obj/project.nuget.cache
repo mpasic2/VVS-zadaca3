@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Nb9kIrCxUJnan1RxCw1UV021gZk7HJ/7H8ig2arolXGD4xHLt4UjbXPGVZoZ0500oJML/uKpWRIdN96QaAn9LQ==",
+  "dgSpecHash": "X1LfL2keCbP4DOPmq6N3zNQkbotXdAWDOJnZWU6NEW0eFAsT80+1Qp55VKwnzsF8oXO9yb6gPezhA1KIcvwMpQ==",
   "success": true,
-  "projectFilePath": "D:\\D\\Ehlimana\\Documents\\VVS\\2020-2021\\Zadaća br. 3 (White Box Testiranje)\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\MaNemoj\\source\\repos\\VVS-zadaca3\\VerifikacijaIValidacijaSoftvera-Vjezbe-z3-GrupaRS-1\\Grupa RS-1\\Filmoteka\\Filmoteka\\Filmoteka.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MaNemoj\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

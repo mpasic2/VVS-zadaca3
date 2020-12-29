@@ -52,13 +52,19 @@ namespace Filmoteka
                 foreach (Gost k in gosti)
                 {
                     if (k.Id == korisnik.Id)
+                    {
                         postojeci = k;
+                        break;
+                    }
                 }
                 if (postojeci == null)
                     foreach (Clan k in clanovi)
                     {
                         if (k.Id == korisnik.Id)
+                        {
                             postojeci = k;
+                            break;
+                        }
                     }
 
                 if (postojeci == null)
@@ -77,13 +83,19 @@ namespace Filmoteka
                 foreach (Gost k in gosti)
                 {
                     if (k.Id == korisnik.Id)
+                    {
                         postojeci = k;
+                        break;
+                    }
                 }
                 if (postojeci == null)
                     foreach (Clan k in clanovi)
                     {
                         if (k.Id == korisnik.Id)
+                        {
                             postojeci = k;
+                            break;
+                        }
                     }
                 else
                 {
@@ -149,6 +161,27 @@ namespace Filmoteka
             return filtrirani;
         }
 
+
+        public List<Film> DajSveFilmoveSGlumcimaRefatorisana(List<string> glumci)
+        {
+            if (filmovi.Count < 1 || glumci == null || glumci.Count < 1)
+                throw new Exception("Prazna lista!");
+
+            List<Film> filtrirani = new List<Film>();
+
+            foreach (Film f in filmovi)
+            {
+                  foreach (string glumac in glumci)
+                    if (!f.Glumci.Contains(glumac))
+                    {
+                        continue;
+                    }
+                filtrirani.Add(f);
+            }
+
+            return filtrirani;
+        }
+
         public void DodajNastavak(Film film, double rating, bool istiGlumci, List<string> noviGlumci = null)
         {
             Film postojeci = Filmovi.Find(f => f.Id == film.Id);
@@ -161,6 +194,16 @@ namespace Filmoteka
 
             Film nastavak = new Film(noviNaziv, rating, film.Žanr, noviGlumci);
             Filmovi.Add(nastavak);
+        }
+
+
+        public void DodajNastavakRefaktorisan(Film film, double rating, bool istiGlumci, List<string> noviGlumci = null)
+        {
+            Film postojeci = Filmovi.Find(f => f.Id == film.Id);
+            if (postojeci == null)
+                throw new ArgumentNullException("Film nije registrovan!");
+
+            Filmovi.Add(new Film(film.Naziv + " 2", rating, film.Žanr, istiGlumci ? film.Glumci : noviGlumci));
         }
 
         #endregion
