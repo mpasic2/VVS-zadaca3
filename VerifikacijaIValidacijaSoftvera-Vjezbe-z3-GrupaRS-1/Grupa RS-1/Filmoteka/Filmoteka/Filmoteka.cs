@@ -52,6 +52,60 @@ namespace Filmoteka
                 foreach (Gost k in gosti)
                 {
                     if (k.Id == korisnik.Id)
+                        postojeci = k;
+                }
+                if (postojeci == null)
+                    foreach (Clan k in clanovi)
+                    {
+                        if (k.Id == korisnik.Id)
+                            postojeci = k;
+                    }
+
+                if (postojeci == null)
+                    if (korisnik is Clan)
+                        clanovi.Add((Clan)korisnik);
+                    else
+                        gosti.Add(korisnik);
+
+                else
+                    throw new InvalidOperationException("Korisnik već postoji u sistemu!");
+            }
+
+            else if (opcija == 1)
+            {
+                Gost postojeci = null;
+                foreach (Gost k in gosti)
+                {
+                    if (k.Id == korisnik.Id)
+                        postojeci = k;
+                }
+                if (postojeci == null)
+                    foreach (Clan k in clanovi)
+                    {
+                        if (k.Id == korisnik.Id)
+                            postojeci = k;
+                    }
+                else
+                {
+                    gosti.Remove(postojeci);
+                    return;
+                }
+                if (postojeci == null)
+                    throw new ArgumentNullException("Korisnik ne postoji u sistemu!");
+                else
+                    clanovi.Remove(clanovi.Find(k => k.Id == korisnik.Id));
+            }
+        }
+
+
+        public void RadSaKorisnicima2(Gost korisnik, int opcija)
+        {
+            if (opcija == 0)
+            {
+                Gost postojeci = null;
+                foreach (Gost k in gosti)
+                {
+                    if (k.Id == korisnik.Id)
                     {
                         postojeci = k;
                         break;
@@ -108,6 +162,110 @@ namespace Filmoteka
                     clanovi.Remove(clanovi.Find(k => k.Id == korisnik.Id));
             }
         }
+        public void RadSaKorisnicima3(Gost korisnik, int opcija)
+        {
+            Gost postojeci = gosti.Find(f => f.Id == korisnik.Id);
+            if (postojeci == null)
+                postojeci = clanovi.Find(f => f.Id == korisnik.Id);
+
+            if (opcija == 0)
+            {
+                if (postojeci == null)
+                    if (korisnik is Clan)
+                        clanovi.Add((Clan)korisnik);
+                    else
+                        gosti.Add(korisnik);
+
+                else
+                    throw new InvalidOperationException("Korisnik već postoji u sistemu!");
+            }
+
+            else if (opcija == 1)
+            {
+                if (postojeci != null)
+                {
+                    gosti.Remove(postojeci);
+                    return;
+                }
+                if (postojeci == null)
+                    throw new ArgumentNullException("Korisnik ne postoji u sistemu!");
+                else
+                    clanovi.Remove(clanovi.Find(k => k.Id == korisnik.Id));
+            }
+        }
+        public void RadSaKorisnicima4(Gost korisnik, int opcija)
+        {
+            Gost postojeci = gosti.Find(f => f.Id == korisnik.Id);
+            if (postojeci == null)
+                postojeci = clanovi.Find(f => f.Id == korisnik.Id);
+
+            if (opcija == 0)
+            {
+                if (postojeci != null) throw new InvalidOperationException("Korisnik već postoji u sistemu!");
+
+                else
+                    if (korisnik is Clan)
+                    clanovi.Add((Clan)korisnik);
+                else
+                    gosti.Add(korisnik);
+            }
+
+            else
+            {
+                if (postojeci != null)
+                {
+                    gosti.Remove(postojeci);
+                    return;
+                }
+                if (postojeci == null)
+                    throw new ArgumentNullException("Korisnik ne postoji u sistemu!");
+                else
+                    clanovi.Remove(clanovi.Find(k => k.Id == korisnik.Id));
+            }
+        }
+
+        public void RadSaKorisnicimaRefaktoring(Gost korisnik, int opcija)
+        {
+            Gost postojeci = null;
+            foreach (Gost k in gosti)
+            {
+                if (k.Id == korisnik.Id)
+                    postojeci = k;
+            }
+            if (postojeci == null)
+                foreach (Clan k in clanovi)
+                {
+                    if (k.Id == korisnik.Id)
+                        postojeci = k;
+                }
+
+            if (opcija == 0)
+            {
+
+                if (postojeci == null)
+                    if (korisnik is Clan)
+                        clanovi.Add((Clan)korisnik);
+                    else
+                        gosti.Add(korisnik);
+
+                else
+                    throw new InvalidOperationException("Korisnik već postoji u sistemu!");
+            }
+
+            else if (opcija == 1)
+            {
+                if (postojeci != null)
+                {
+                    gosti.Remove(postojeci);
+                    return;
+                }
+                if (postojeci == null)
+                    throw new ArgumentNullException("Korisnik ne postoji u sistemu!");
+                else
+                    clanovi.Remove(clanovi.Find(k => k.Id == korisnik.Id));
+            }
+        }
+
 
         public void DodajWatchlistu(Clan c, List<Film> filmovi, string naziv)
         {

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filmoteka", "Filmoteka\Filmoteka.csproj", "{0F2A7D4F-73E0-4672-814C-4BAB2D11B862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testiranje", "Testiranje\Testiranje.csproj", "{65103919-6F89-46F1-A154-959A276ACAA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0F2A7D4F-73E0-4672-814C-4BAB2D11B862}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F2A7D4F-73E0-4672-814C-4BAB2D11B862}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F2A7D4F-73E0-4672-814C-4BAB2D11B862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65103919-6F89-46F1-A154-959A276ACAA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65103919-6F89-46F1-A154-959A276ACAA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65103919-6F89-46F1-A154-959A276ACAA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65103919-6F89-46F1-A154-959A276ACAA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

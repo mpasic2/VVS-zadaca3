@@ -70,6 +70,10 @@ namespace Filmoteka
         public string Id
         {
             get => id;
+            set
+            {
+                id = value;
+            }
         }
 
         #endregion
@@ -124,6 +128,19 @@ namespace Filmoteka
                 password = password.Substring(0, 20);
 
             return new Tuple<string, string>(username, password);
+        }
+
+        public static Tuple<string, string> AutomatskiKorisničkiPodaci2(string ime, string prezime)
+        {
+            if (String.IsNullOrWhiteSpace(ime) || String.IsNullOrWhiteSpace(prezime)
+                || !ime.All(char.IsLetter) || !prezime.All(char.IsLetter))
+                throw new Exception("Neispravni argumenti!");
+
+            string podaci = ime.Substring(0, 2) + prezime + ime.Substring(2);
+            if (podaci.Length > 20)
+                podaci = podaci.Substring(0, 20);
+
+            return new Tuple<string, string>(podaci.ToLower(), podaci.ToUpper());
         }
 
         #endregion

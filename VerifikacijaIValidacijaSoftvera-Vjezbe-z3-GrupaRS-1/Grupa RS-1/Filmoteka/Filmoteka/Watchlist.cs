@@ -70,6 +70,19 @@ namespace Filmoteka
             return prosjek;
         }
 
+        public double DajSrednjuOcjenuSvihFilmovaRefaktoring()
+        {
+            double prosjek = 0.0;
+
+            if (filmovi.Count < 1)
+                throw new Exception("Prazna watchlista!");
+
+            foreach (Film film in filmovi)
+                prosjek += film.Ocjena;
+
+            return prosjek /= filmovi.Count;
+        }
+
         #endregion
     }
 }
